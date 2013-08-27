@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Anagrams!</h1>
+  <% if @anagram_results %>
+    <p>Anagrams are: </p>
+    <% @anagram_results.each do |i| %>
+      <p><span id="anagrams"><%= i %></span></p>
+    <% end %>
+  <% end %>
+
+  <form action="/anagram" method="post">
+    ENTER A WORD:
+    <br>
+    <input type="text" name="user_input">
+    <input type="submit" value="CLICK ME!">
+  </form>
+</div>
